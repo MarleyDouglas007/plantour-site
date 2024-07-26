@@ -1,3 +1,4 @@
+/* App.css */
 /* Reset básico */
 * {
   margin: 0;
@@ -12,7 +13,6 @@ body {
   background-color: #f4f4f4;
   color: #333;
   font-family: 'Roboto', sans-serif;
-
 }
 
 .App {
@@ -28,12 +28,23 @@ body {
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .logo {
+  width: 100px;
+  height: auto;
+}
+
+.logo-text {
   font-size: 2rem;
   font-weight: bold;
 }
@@ -41,7 +52,9 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-top: 1rem;
 }
 
 .nav-links li {
@@ -65,7 +78,7 @@ body {
 }
 
 .about-section, .features-section {
-  background: white;
+  background: #f4f4f4;
   margin-bottom: 1rem;
   padding: 2rem 0;
 }
@@ -90,6 +103,67 @@ p {
   margin-bottom: 0.5rem;
   padding: 0.5rem;
   border-radius: 5px;
+}
+
+/* Estilização do container flexível */
+.features-carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.features-text {
+  flex: 1;
+  padding-right: 2rem;
+  min-width: 300px; /* Largura mínima do texto */
+}
+
+.features-carousel {
+  flex: 1;
+  max-width: 300px; /* Largura máxima do carrossel */
+  margin: 0 auto; /* Centraliza o carrossel */
+}
+
+.carousel .slide {
+  background: transparent;
+}
+
+.carousel-image-container {
+  position: relative;
+  margin: 0 auto; /* Centraliza o carrossel */
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease;
+  filter: brightness(0.7);
+  border-radius: 10px;
+  max-height: 800px; /* Define a altura máxima das imagens */
+  object-fit: cover; /* Mantém a proporção das imagens */
+}
+
+.carousel-image-container:hover .carousel-image {
+  filter: brightness(1);
+}
+
+.carousel-image-container .legend {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  max-width: 90%; /* Ajusta o tamanho do texto para evitar cortes */
+  text-align: center;
+}
+
+.carousel-image-container:hover .legend {
+  display: block;
 }
 
 .footer {
