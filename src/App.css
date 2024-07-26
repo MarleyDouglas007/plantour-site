@@ -1,4 +1,3 @@
-/* App.css */
 /* Reset básico */
 * {
   margin: 0;
@@ -24,29 +23,27 @@ body {
 .header {
   background-color: #2D9AFF;
   color: white;
-  padding: 1rem 0;
+  padding: 1rem;
 }
 
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  flex-direction: column;
 }
 
 .logo {
   width: 100px;
   height: auto;
-}
-
-.logo-text {
-  font-size: 2rem;
-  font-weight: bold;
+  margin-right: 1rem;
 }
 
 .nav-links {
@@ -54,7 +51,6 @@ body {
   display: flex;
   justify-content: center;
   font-size: 1.3rem;
-  margin-top: 1rem;
 }
 
 .nav-links li {
@@ -77,10 +73,31 @@ body {
   padding: 2rem 0;
 }
 
+.content-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
 .about-section, .features-section {
   background: #f4f4f4;
   margin-bottom: 1rem;
   padding: 2rem 0;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  padding-right: 2rem;
+  min-width: 200px;
+  margin-left: 100px;
 }
 
 h2 {
@@ -105,7 +122,6 @@ p {
   border-radius: 5px;
 }
 
-/* Estilização do container flexível */
 .features-carousel-container {
   display: flex;
   align-items: center;
@@ -116,13 +132,13 @@ p {
 .features-text {
   flex: 1;
   padding-right: 2rem;
-  min-width: 300px; /* Largura mínima do texto */
+  min-width: 300px;
 }
 
 .features-carousel {
   flex: 1;
-  max-width: 300px; /* Largura máxima do carrossel */
-  margin: 0 auto; /* Centraliza o carrossel */
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 .carousel .slide {
@@ -131,7 +147,7 @@ p {
 
 .carousel-image-container {
   position: relative;
-  margin: 0 auto; /* Centraliza o carrossel */
+  margin: 0 auto;
 }
 
 .carousel-image {
@@ -140,30 +156,43 @@ p {
   transition: filter 0.3s ease;
   filter: brightness(0.7);
   border-radius: 10px;
-  max-height: 800px; /* Define a altura máxima das imagens */
-  object-fit: cover; /* Mantém a proporção das imagens */
+  max-height: 800px;
+  object-fit: cover;
 }
 
 .carousel-image-container:hover .carousel-image {
   filter: brightness(1);
 }
 
-.carousel-image-container .legend {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 1rem;
-  max-width: 90%; /* Ajusta o tamanho do texto para evitar cortes */
-  text-align: center;
+.comment-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 8rem;
+  margin-left: 300px;
 }
 
-.carousel-image-container:hover .legend {
-  display: block;
+.comment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 250px;
+  margin: 1rem;
+}
+
+.comment-image {
+  width: 50%;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.comment p {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #555;
 }
 
 .footer {
@@ -172,4 +201,12 @@ p {
   text-align: center;
   padding: 1rem 0;
   font-size: 0.9rem;
+  /* position: fixed; Fixar o footer na parte inferior */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
 }
