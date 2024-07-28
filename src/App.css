@@ -41,9 +41,10 @@ body {
 }
 
 .logo {
-  width: 100px;
+  width: 70px;
   height: auto;
   margin-right: 1rem;
+  margin-left: -100px;
 }
 
 .nav-links {
@@ -90,24 +91,29 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* Changed from wrap to nowrap */
 }
 
 .about-text {
   flex: 1;
   padding-right: 2rem;
-  min-width: 200px;
-  margin-left: 100px;
+  min-width: 300px; /* Adjusted from 200px to 300px for better alignment */
+  margin-left: 200px;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 p {
   font-size: 1.2rem;
   line-height: 1.6;
+}
+.playText {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-right: 150px;
 }
 
 .features-list {
@@ -137,7 +143,7 @@ p {
 
 .features-carousel {
   flex: 1;
-  max-width: 300px;
+  max-width: 300px; /* Adjusted the max-width for proper sizing */
   margin: 0 auto;
 }
 
@@ -158,6 +164,7 @@ p {
   border-radius: 10px;
   max-height: 800px;
   object-fit: cover;
+  
 }
 
 .carousel-image-container:hover .carousel-image {
@@ -170,7 +177,7 @@ p {
   align-items: center;
   flex-wrap: wrap;
   margin-top: 8rem;
-  margin-left: 300px;
+  margin-left: 10px;
 }
 
 .comment {
@@ -205,8 +212,31 @@ p {
   bottom: 0;
   left: 0;
   width: 100%;
+  
 }
 
 .footer p {
   margin: 0;
+}
+.imagem{
+  height: 250px;
+  width: 250px;
+  border-radius: 300px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.recurso{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* ou space-between se quiser espaçamento máximo */
+  margin-bottom: 1rem;
+}
+.playLogo{
+  height: 400px;
+  width: 400px;
+  border-radius: 0px;
+  margin-right: 50px;
+  margin-top: 20px;
+  margin-left: 150px;
 }

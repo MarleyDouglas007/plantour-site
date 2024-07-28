@@ -16,6 +16,11 @@ import perfil5 from './imagens/perfil5.jpg';
 import postaCard from './imagens/postaCard.jpeg';
 import roteiro from './imagens/roteiro.jpeg';
 import configuracao from './imagens/configuracao.jpeg';
+import ImagemPlaces from './imagens/imagemPlaces.webp';
+import imagemRoteiro from './imagens/imagemRoteiro.jpg';
+import locais from './imagens/locais.avif';
+import playstore from './imagens/playstore.webp';
+
 
 function App() {
   return (
@@ -24,6 +29,7 @@ function App() {
         <div className="container">
           <div className="logo-container">
             <img src={logo} alt="Recursos do Plantour" className="logo" />
+            <h1>Plantour</h1>
           </div>
           <nav>
             <ul className="nav-links">
@@ -40,7 +46,7 @@ function App() {
             <div className="container about-container">
               <div className="about-text">
                 <h2>Sobre o Plantour</h2>
-                <p>O Plantour é um aplicativo inovador que ajuda você a planejar suas viagens de forma eficiente e divertida. Com ele, você pode buscar destinos, encontrar pontos turísticos e organizar seus passeios em um só lugar.</p>
+                <p>O PlanTour é um software inovador desenvolvido para apoiar viajantes do mundo todo. Por meio de sua plataforma, os usuários têm acesso a roteiros populares, vendas de passeios e sugestões de lugares, tudo baseado nas avaliações e experiências de outros viajantes. O PlanTour personaliza as recomendações de acordo com as preferências individuais de cada usuário, proporcionando uma experiência única e sob medida. Além disso, o software visa simplificar o processo de planejamento de viagens, tornando-o mais eficiente e agradável. Com o PlanTour, os viajantes podem explorar novos destinos, descobrir atrações populares e obter informações valiosas para tornar suas viagens ainda mais enriquecedoras.</p>
               </div>
               <Carousel
                 className="features-carousel"
@@ -68,7 +74,41 @@ function App() {
                 </div>
               </Carousel>
             </div>
-            <div className="comment-section">
+           
+          </div>
+        </section>
+        <section id="features" className="features-section">
+          <div className="container features-carousel-container">
+            <div className="features-text">
+              <h2>Recursos</h2>
+              <ul className="features-list">
+                <li>Busca de destinos e pontos turísticos</li>
+                <div className="recurso" >
+                <img src={ImagemPlaces} alt="Sobre Plantour" className="imagem" />
+                <p>O Plantour utiliza a avançada tecnologia do Google Places API para oferecer informações detalhadas e atualizadas sobre destinos e pontos turísticos ao redor do mundo. Com essa integração, você pode buscar por locais populares, obter descrições precisas, fotos, avaliações e planejar suas viagens com confiança, garantindo acesso às melhores recomendações e tornando suas aventuras inesquecíveis.</p>
+                </div>
+                <li>Organização de roteiros de viagem</li>
+                <div className="recurso" >
+                <p>O Plantour facilita a organização de roteiros de viagem, permitindo que os usuários planejem seus itinerários com facilidade. Com uma interface intuitiva, é possível adicionar destinos, programar atividades e ajustar horários conforme preferências pessoais. O Plantour também sugere pontos turísticos com base em avaliações de outros usuários, garantindo roteiros enriquecidos e personalizados para uma experiência de viagem inesquecível.</p>
+                <img src={imagemRoteiro} alt="Sobre Plantour" className="imagem" />
+                </div>
+                <li>Informações detalhadas sobre locais</li>
+                <div className="recurso" >
+                <img src={locais} alt="Sobre Plantour" className="imagem" />
+                <p>O Plantour oferece informações detalhadas sobre locais, incluindo descrições precisas, fotos e avaliações atualizadas. Com esses dados, os usuários podem conhecer melhor os destinos e atrações, facilitando a escolha dos melhores lugares para visitar e garantindo uma experiência de viagem mais informada e agradável.</p>
+                </div>
+              </ul>
+
+            </div>
+          </div>
+        </section>
+      </main>
+
+    <div className="recurso" >
+    <img src={playstore} alt="Sobre Plantour" className="playLogo" />
+    <p className="playText" >O Plantour é um aplicativo móvel para Android que facilita o planejamento das suas viagens de forma prática e intuitiva. Em breve disponível na Google Play Store, o Plantour oferece uma experiência completa para explorar destinos, criar roteiros personalizados e descobrir locais incríveis. Com recursos que incluem exploração de destinos turísticos, criação de roteiros ajustáveis, sugestões personalizadas baseadas em avaliações de outros usuários e informações detalhadas e atualizadas, o Plantour é a ferramenta ideal para transformar suas viagens em aventuras inesquecíveis. Fique atento para a nossa chegada na loja de aplicativos e prepare-se para planejar sua próxima viagem com facilidade e eficiência!</p>
+    </div>
+              <div className="comment-section">
               <div className="comment">
                 <img src={perfil1} alt="Usuário 1" className="comment-image" />
                 <p>Excelente aplicativo! Planejei minhas férias perfeitamente com o Plantour! - João Silva</p>
@@ -90,41 +130,6 @@ function App() {
                 <p>Organizei toda minha viagem com o Plantour. Sensacional! - Ana Paula</p>
               </div>
             </div>
-          </div>
-        </section>
-        <section id="features" className="features-section">
-          <div className="container features-carousel-container">
-            <div className="features-text">
-              <h2>Recursos</h2>
-              <ul className="features-list">
-                <li>Busca de destinos e pontos turísticos</li>
-                <li>Organização de roteiros de viagem</li>
-                <li>Informações detalhadas sobre locais</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-      </main>
-      <Carousel
-                className="features-carousel"
-                showThumbs={false}
-                showStatus={false}
-                infiniteLoop
-                autoPlay
-                interval={3000}
-                transitionTime={500}
-              >
-                <div className="carousel-image-container">
-                  <img src={configuracao} alt="Sobre Plantour" className="carousel-image" />
-                </div>
-                <div className="carousel-image-container">
-                  <img src={roteiro} alt="Sobre Plantour" className="carousel-image" />
-                </div>
-                <div className="carousel-image-container">
-                  <img src={postaCard} alt="Sobre Plantour" className="carousel-image" />
-                </div>
-               
-              </Carousel>
       <footer className="footer">
         <div className="container">
           <p>&copy; 2024 Plantour. Todos os direitos reservados.</p>
